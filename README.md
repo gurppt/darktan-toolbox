@@ -6,3 +6,25 @@ Some scripts are very specific and only useful for the production they were crea
 
 Python 3.1 or higher is required on the machines.
 
+
+For Windows 10 :
+
+setx PATH "%PATH%;C:\Users\yourusername\bin"
+
+check with :
+echo %PATH%
+
+The "bin" folder contains shims to the scripts, like this :
+
+import runpy, sys
+sys.argv = [r"B:\app\scripts\darktan.py"] + sys.argv[1:]
+runpy.run_path(r"B:\app\scripts\darktan.py", run_name="__main__")
+
+Scripts and shims can be managed with darktan.py
+
+darktan list
+for showing all the scripts installed
+
+<img width="358" height="115" alt="image" src="https://github.com/user-attachments/assets/a5635495-567c-460b-985f-0edbab905073" />
+
+//WIP - edit later
